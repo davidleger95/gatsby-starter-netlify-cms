@@ -1,10 +1,9 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "davidleger.me-v5",
+  "description": "Version 5 of my personal website.",
   "version": "1.1.3",
-  "author": "Austin Green",
+  "author": "David Leger",
   "dependencies": {
-    "bulma": "^0.7.0",
     "gatsby": "^2.0.0",
     "gatsby-plugin-netlify": "^2.0.0",
     "gatsby-plugin-netlify-cms": "^3.0.0",
@@ -18,12 +17,14 @@
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms": "^2.1.1",
-    "node-sass": "^4.9.2",
     "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
+    "remark": "^10.0.0",
+    "remark-html": "^8.0.0",
+    "styled-components": "^4.0.2",
     "uuid": "^3.2.1"
   },
   "keywords": [
