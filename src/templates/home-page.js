@@ -46,7 +46,21 @@ const Description = styled.p`
   margin: 0;
 `;
 
-export default class IndexPage extends React.Component {
+export const HomePageTemplate = ({title, subTitle, description, email }) => (
+  <Layout>
+    <Header>
+      <HeaderContent>
+        <Title>{title}</Title>
+        <SubTitle>{subTitle}</SubTitle>
+        <Description dangerouslySetInnerHTML={{ __html: description }} />
+        <SocialLinks />
+        <Button href={`mailto:${email}`}>Send Me an Email!</Button>
+      </HeaderContent>
+    </Header>
+  </Layout>
+)
+
+export default class HomePage extends React.Component {
   static propTypes = {
     data: PropTypes.shape({
       markdownRemark: PropTypes.shape({
@@ -56,25 +70,13 @@ export default class IndexPage extends React.Component {
   }
 
   render() {
-    const { 
-      title, subTitle, description 
-    } = this.props.data.markdownRemark.frontmatter;
-
-    console.log(this.props);
+    const { title, subTitle } = this.props.data.markdownRemark.frontmatter;
     
     return (
-      <Layout>
+      <div>
         <Helmet title={`${title} | ${subTitle}`} />
-        <Header>
-          <HeaderContent>
-            <Title>{title}</Title>
-            <SubTitle>{subTitle}</SubTitle>
-            <Description dangerouslySetInnerHTML={{ __html: description }} />
-            <SocialLinks />
-            <Button>Send Me an Email!</Button>
-          </HeaderContent>
-        </Header>
-      </Layout>
+        <HomePageTemplate {...this.props.data.markdownRemark.frontmatter} />
+      </div>
     )
   }
 }
