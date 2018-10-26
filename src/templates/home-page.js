@@ -92,6 +92,7 @@ export const homePageQuery = graphql`
         title
         subTitle
         description
+        email
       }
     }
   }
