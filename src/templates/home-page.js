@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
+
 import Layout from '../components/Layout';
 import SocialLinks from '../components/SocialLinks';
 import Button from '../components/Button';
-import styled from 'styled-components';
+import favicon from '../img/favicon.png';
 
 const Header = styled.header`
   display: grid;
@@ -74,7 +76,16 @@ export default class HomePage extends React.Component {
     
     return (
       <div>
-        <Helmet title={`${title} | ${subTitle}`} />
+        <Helmet 
+          title={`${title} | ${subTitle}`} 
+          meta={[
+              { name: 'description', content: 'I’m a frontend web developer living in Fredericton, New Brunswick.' },
+              { name: 'keywords', content: 'webdev, gatsbyjs, reactjs, redux, frontend, graphql, design, ux, user experience' },
+          ]}
+          link={[
+              { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
+          ]}
+          />
         <HomePageTemplate {...this.props.data.markdownRemark.frontmatter} />
       </div>
     )
