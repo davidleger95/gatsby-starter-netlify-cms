@@ -1,5 +1,6 @@
 import React from 'react'
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { darken } from 'polished';
 
 // import Navbar from '../components/Navbar';
 
@@ -23,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a, button {
-    color: ${props => props.theme.colors.accent};
+    color: ${props => darken(0.142, props.theme.colors.accent)};
     font-family: 'Roboto Mono', monospace;
     text-decoration: none;
   }

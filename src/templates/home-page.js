@@ -76,7 +76,8 @@ export default class HomePage extends React.Component {
     
     return (
       <div>
-        <Helmet 
+        <Helmet
+          htmlAttributes={{ lang : 'en' }}
           title={`${title} | ${subTitle}`} 
           meta={[
               { name: 'description', content: 'I’m a frontend web developer living in Fredericton, New Brunswick.' },
