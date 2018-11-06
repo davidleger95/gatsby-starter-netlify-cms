@@ -48,46 +48,65 @@ const Description = styled.p`
   margin: 0;
 `;
 
-export const HomePageTemplate = ({title, subTitle, description, email }) => (
-  <Layout>
-    <Header>
-      <HeaderContent>
-        <Title>{title}</Title>
-        <SubTitle>{subTitle}</SubTitle>
-        <Description dangerouslySetInnerHTML={{ __html: description }} />
-        <SocialLinks />
-        <Button href={`mailto:${email}`}>Send Me an Email!</Button>
-      </HeaderContent>
-    </Header>
-  </Layout>
-)
+HomePageTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired
+}
+
+export function HomePageTemplate ({ title, subTitle, description, email }) {
+  return (
+    <Layout>
+      <Header>
+        <HeaderContent>
+          <Title>{title}</Title>
+          <SubTitle>{subTitle}</SubTitle>
+          <Description dangerouslySetInnerHTML={{ __html: description }} />
+          <SocialLinks />
+          <Button href={`mailto:${email}`}>Send Me an Email!</Button>
+        </HeaderContent>
+      </Header>
+    </Layout>
+  );
+}
 
 export default class HomePage extends React.Component {
   static propTypes = {
     data: PropTypes.shape({
+      site: PropTypes.shape({
+        siteMetadata: PropTypes.shape({
+          title: PropTypes.string.isRequired,
+          subTitle: PropTypes.string.isRequired,
+          description: PropTypes.string.isRequired,
+          keywords: PropTypes.string.isRequired,
+        }).isRequired
+      }).isRequired,
       markdownRemark: PropTypes.shape({
-        frontmatter: PropTypes.object
-      })
+        frontmatter: PropTypes.object.isRequired
+      }).isRequired
     })
   }
 
   render() {
-    const { title, subTitle } = this.props.data.markdownRemark.frontmatter;
+    const { site, markdownRemark } = this.props.data;
+    const { siteMetadata } = site;
     
     return (
       <div>
         <Helmet
           htmlAttributes={{ lang : 'en' }}
-          title={`${title} | ${subTitle}`} 
+          title={`${siteMetadata.title} | ${siteMetadata.subTitle}`} 
           meta={[
-              { name: 'description', content: 'I’m a frontend web developer living in Fredericton, New Brunswick.' },
-              { name: 'keywords', content: 'webdev, gatsbyjs, reactjs, redux, frontend, graphql, design, ux, user experience' },
+              // TODO: refactor to loop over metadata and create a tag for each key/value pair.
+              { name: 'description', content: siteMetadata.description },
+              { name: 'keywords', content: siteMetadata.keywords }
           ]}
           link={[
               { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
           ]}
           />
-        <HomePageTemplate {...this.props.data.markdownRemark.frontmatter} />
+        <HomePageTemplate {...markdownRemark.frontmatter} />
       </div>
     )
   }
@@ -99,6 +118,8 @@ export const homePageQuery = graphql`
       siteMetadata {
         title
         subTitle
+        description
+        keywords
       }
     }
     markdownRemark(id: { eq: $id }) {

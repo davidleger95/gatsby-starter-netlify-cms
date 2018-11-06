@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'David Leger',
-    subTitle: 'I\'m and artsy web developer.'
+    subTitle: 'Frontend web developer.',
+    description: 'I’m a frontend web developer living in Fredericton, New Brunswick.',
+    keywords: 'webdev, gatsbyjs, reactjs, redux, frontend, graphql, design, ux, user experience'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

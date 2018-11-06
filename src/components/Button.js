@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const ButtonStyle = styled.a`
+const Button = styled.a`
   position: relative;
   border: none;
   background: ${props => props.theme.colors.primary};
@@ -28,10 +29,14 @@ const ButtonStyle = styled.a`
   }
 `;
 
-const Button = props => (
-    <ButtonStyle {...props}>
-      {props.children}
-    </ButtonStyle>
-);
+Button.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
-export default Button;
+function Button_({ children, ...props }) {
+  return (
+    <Button {...props}>{children}</Button>
+  );
+}
+
+export default Button_;

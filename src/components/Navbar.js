@@ -17,7 +17,6 @@ const Nav = styled.nav`
     color: ${props => props.theme.colors.lightGrey};
     box-shadow: 0 0.75em 2em rgba(0,0,0,0.3);
 
-
     &::before {
       content: '';
       display: block;
@@ -43,20 +42,22 @@ const Nav = styled.nav`
 
 `;
 
-const Navbar = () => (
-  <Nav className="navbar is-transparent">
-    <ul>
-      <li>
-        <Link to="#about">About</Link>
-      </li>
-      <li>
-        <Link to="#work">Work</Link>
-      </li>
-      <li>
-        <Link to="#contact">Contact</Link>
-      </li>
-    </ul>
-  </Nav>
-)
+function Navbar() {
+  return (
+    <Nav>
+      <ul>
+        <li>
+          <Link to="#about">About</Link>
+        </li>
+        <li>
+          <Link to="#work">Work</Link>
+        </li>
+        <li>
+          <Link to="#contact">Contact</Link>
+        </li>
+      </ul>
+    </Nav>
+  );
+}
 
-export default Navbar
+export default Navbar;
