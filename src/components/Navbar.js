@@ -30,6 +30,7 @@ const Nav = styled.nav`
   }
 
   a {
+    font-size: 0.8em;
     color: inherit;
     text-decoration: none;
     display: block;
