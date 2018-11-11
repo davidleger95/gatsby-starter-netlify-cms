@@ -48,8 +48,9 @@
     demo: http://davidleger95.github.io/css-circle-charts/
     repo: https://github.com/davidleger95/css-circle-charts
   description: |
-      An easily resizable circle chart module which uses CSS & SVG for structure and JavaScript/jQuery to calculate -- based on the plain-text value centered in the circle -- the degree to which the circle that is filled.
-      Pollster data from the Huffington Post related to the 2016 New Hampshire presidential primary is used as sample data.
+      An easily resizable circle chart module which uses CSS & SVG for structure 
+      and JavaScript/jQuery to calculate -- based on the plain-text value centered 
+      in the circle -- the degree to which the circle that is filled.
 
 - title: "Donald Knuth Biography Website"
   stack: "HTML, SCSS, jQuery, Jekyll"
