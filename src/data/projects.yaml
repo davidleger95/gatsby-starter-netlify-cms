@@ -15,6 +15,14 @@
     repo: https://github.com/davidleger95/top-albums
   description: |
       A colection of twelve albums that I throughly enjoy.
+- title: "Character Code Converter"
+  stack: "React.js, ES6+, create-react-app, HTML, SCSS"
+  date: "Sep 2017"
+  links:
+    demo: http://davidleger95.github.io/ascii-app
+    repo: https://github.com/davidleger95/ascii-app
+  description: |
+      A character code converter that shows the Unicode value for a given character in binary, decimal, and hexidecimal.
 - title: "Timer App"
   stack: "React.js, ES6+, create-react-app, HTML, SCSS"
   date: "Mar 2017"
