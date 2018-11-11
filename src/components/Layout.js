@@ -2,7 +2,8 @@ import React from 'react'
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { darken } from 'polished';
 
-// import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:500|Roboto:400,400i,700,700i');
@@ -39,15 +40,17 @@ const theme = {
     accent: '#FF1C95',
     lightGrey: '#eee'
   },
-  maxWidth: '720px'
+  maxWidth: '720px',
+  sectionWidth: '940px',
 }
 
 const TemplateWrapper = ({ children }) => (
   <ThemeProvider theme={theme}>
     <div>
       <GlobalStyle />
-      {/* <Navbar /> */}
+      <Navbar />
       <div>{children}</div>
+      <Footer />
     </div>
   </ThemeProvider>
 )

@@ -1,0 +1,53 @@
+- title: My Personal Website (You're looking at it right now!)
+  stack: "React.js, styled-components, Gatsby, Netlify CMS"
+  date: "Nov 2018"
+  repo: david-leger.me-v5
+  description: |
+      The fifth version of my personal website.
+  links:
+    demo: https://davidleger.me
+    repo: https://github.com/davidleger95/davidleger.me-v5
+- title: "Music I Listen To"
+  stack: "React.js, ES6+, create-react-app, HTML, SCSS"
+  date: "Nov 2017"
+  links:
+    demo: https://music.davidleger.me
+    repo: https://github.com/davidleger95/top-albums
+  description: |
+      A colection of twelve albums that I throughly enjoy.
+- title: "Timer App"
+  stack: "React.js, ES6+, create-react-app, HTML, SCSS"
+  date: "Mar 2017"
+  links:
+    demo: http://davidleger95.github.io/timer-app
+    repo: https://github.com/davidleger95/timer-app
+  description: |
+      A timer app I built in a few hours to learn about create-react-app.
+- title: "New Age Creators Website"
+  image: "logo-nac.png"
+  stack: "HTML, SCSS, jQuery, Jekyll"
+  date: "Mar 2016"
+  links:
+    demo: http://davidleger95.github.io/nac-website/
+    repo: https://github.com/davidleger95/nac-website
+  description: |
+      A website I built for one of my favorite YouTube channels: New Age Creators, an international collaboration channel made up of five young and talented creators.
+
+- title: "CSS/SVG Circle Charts"
+  stack: "HTML, SVG, SCSS, jQuery, Jekyll"
+  date: "Jan 2016"
+  links:
+    demo: http://davidleger95.github.io/css-circle-charts/
+    repo: https://github.com/davidleger95/css-circle-charts
+  description: |
+      An easily resizable circle chart module which uses CSS & SVG for structure and JavaScript/jQuery to calculate -- based on the plain-text value centered in the circle -- the degree to which the circle that is filled.
+      Pollster data from the Huffington Post related to the 2016 New Hampshire presidential primary is used as sample data.
+
+- title: "Donald Knuth Biography Website"
+  stack: "HTML, SCSS, jQuery, Jekyll"
+  date: "Oct 2015"
+  links:
+    demo: http://davidleger95.github.io/knuth-biography/
+    repo: https://github.com/davidleger95/knuth-biography
+  description: |
+      A biography website about Donald Knuth.

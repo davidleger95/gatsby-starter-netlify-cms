@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import styled from 'styled-components';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Nav = styled.nav`
   ul {
-    position: absolute;
+    position: fixed;
+    z-index: 999;
     right: 0;
     top: 1em;
     list-style: none;
@@ -39,7 +40,6 @@ const Nav = styled.nav`
     content: '> ';
     color: ${props => props.theme.colors.accent};
   }
-
 `;
 
 function Navbar() {
@@ -47,13 +47,13 @@ function Navbar() {
     <Nav>
       <ul>
         <li>
-          <Link to="#about">About</Link>
+          <AnchorLink href="#about">About</AnchorLink>
         </li>
         <li>
-          <Link to="#work">Work</Link>
+          <AnchorLink href="#projects">Projects</AnchorLink>
         </li>
         <li>
-          <Link to="#contact">Contact</Link>
+          <AnchorLink href="#contact">Contact</AnchorLink>
         </li>
       </ul>
     </Nav>
