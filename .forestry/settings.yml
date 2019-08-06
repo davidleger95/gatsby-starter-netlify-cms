@@ -7,7 +7,6 @@ sections:
 - type: document
   path: src/data/about-me.md
   label: About
-  match: "**/*"
 - type: document
   path: src/data/projects.yaml
   label: Projects
