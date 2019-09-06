@@ -48,18 +48,6 @@ const SectionContent = styled.div`
   grid-gap: 1.5em;
   max-width: ${props => props.theme.sectionWidth};
   padding: 5vh 0;
-
-  &#about {
-    ul {
-    list-style: none;
-    padding-left: 1em;
-    li::before {
-      content: '>';
-      padding-right: 0.5em;
-      color: ${props => props.theme.colors.accent};
-    }
-  }
-  }
 `;
 
 const Title = styled.h1`
