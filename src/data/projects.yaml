@@ -3,7 +3,7 @@
   date: "Nov 2018"
   repo: david-leger.me-v5
   description: |
-      The fifth version of my personal website.
+      The fifth version of my personal website. 
   links:
     demo: https://davidleger.me
     repo: https://github.com/davidleger95/davidleger.me-v5
@@ -15,14 +15,6 @@
     repo: https://github.com/davidleger95/top-albums
   description: |
       A colection of twelve albums that I throughly enjoy.
-- title: "Character Code Converter"
-  stack: "React.js, ES6+, create-react-app, HTML, SCSS"
-  date: "Sep 2017"
-  links:
-    demo: http://davidleger95.github.io/ascii-app
-    repo: https://github.com/davidleger95/ascii-app
-  description: |
-      A character code converter that shows the Unicode value for a given character in binary, decimal, and hexidecimal.
 - title: "Timer App"
   stack: "React.js, ES6+, create-react-app, HTML, SCSS"
   date: "Mar 2017"
@@ -40,18 +32,6 @@
     repo: https://github.com/davidleger95/nac-website
   description: |
       A website I built for one of my favorite YouTube channels: New Age Creators, an international collaboration channel made up of five young and talented creators.
-
-- title: "CSS/SVG Circle Charts"
-  stack: "HTML, SVG, SCSS, jQuery, Jekyll"
-  date: "Jan 2016"
-  links:
-    demo: http://davidleger95.github.io/css-circle-charts/
-    repo: https://github.com/davidleger95/css-circle-charts
-  description: |
-      An easily resizable circle chart module which uses CSS & SVG for structure 
-      and JavaScript/jQuery to calculate -- based on the plain-text value centered 
-      in the circle -- the degree to which the circle that is filled.
-
 - title: "Donald Knuth Biography Website"
   stack: "HTML, SCSS, jQuery, Jekyll"
   date: "Oct 2015"
